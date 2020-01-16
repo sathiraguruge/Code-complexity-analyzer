@@ -4,7 +4,7 @@ public class CiResultModel {
 	private String className;
 	private Integer totalCiValue;
 	private Integer numberOfAncestors;
-	private String classHierachy;
+	private String classHierarchy;
 
 	public CiResultModel() {
 	}
@@ -14,7 +14,7 @@ public class CiResultModel {
 		this.className = className;
 		this.totalCiValue = totalCiValue;
 		this.numberOfAncestors = numberOfAncestors;
-		this.classHierachy = classHierachy;
+		this.classHierarchy = classHierachy;
 	}
 
 	/**
@@ -62,15 +62,15 @@ public class CiResultModel {
 	/**
 	 * @return the classHierachy
 	 */
-	public String getClassHierachy() {
-		return classHierachy;
+	public String getClassHierarchy() {
+		return classHierarchy;
 	}
 
 	/**
-	 * @param classHierachy the classHierachy to set
+	 * @param classHierarchy the classHierachy to set
 	 */
-	public void setClassHierachy(String classHierachy) {
-		this.classHierachy = classHierachy;
+	public void setClassHierarchy(String classHierarchy) {
+		this.classHierarchy = classHierarchy;
 	}
 
 }
