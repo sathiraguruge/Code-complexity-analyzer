@@ -13,7 +13,7 @@
  * 
  */
 
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -12,13 +12,14 @@
 --  ----------  ------  --------------------------------------------------------------------------------
 */
 
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class CTCServiceImpl {
     private static final Logger logger = LogManager.getLogger(CTCServiceImpl.class);
@@ -272,7 +273,7 @@ public class CTCServiceImpl {
         return -1;
     }
 
-    public HashMap<Integer, Integer> getLineScore() {
+    public Map<Integer, Integer> getLineScore() {
         return lineScore;
     }
 }

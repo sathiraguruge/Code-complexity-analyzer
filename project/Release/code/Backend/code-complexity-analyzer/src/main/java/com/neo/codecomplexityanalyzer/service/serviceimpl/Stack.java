@@ -6,7 +6,7 @@
 --  ----------  ------  --------------------------------------------------------------------------------
 */
 
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 public class Stack {
     private char arr[];
@@ -22,7 +22,7 @@ public class Stack {
 
     // Utility function to add an element x in the stack
     public void push(char x) {
-        if (isFull()) {
+        if (Boolean.TRUE.equals(isFull())) {
             System.out.println("OverFlow\nProgram Terminated\n");
             System.exit(1);
         }
@@ -32,7 +32,7 @@ public class Stack {
     // Utility function to pop top element from the stack
     public char pop() {
         // check for stack underflow
-        if (isEmpty()) {
+        if (Boolean.TRUE.equals(isEmpty())) {
             System.out.println("UnderFlow\nProgram Terminated");
             System.exit(1);
         }
@@ -42,7 +42,7 @@ public class Stack {
 
     // Utility function to return top element in a stack
     public char peek() {
-        if (!isEmpty())
+        if (!Boolean.TRUE.equals(isEmpty()))
             return arr[top];
         else
             System.exit(1);

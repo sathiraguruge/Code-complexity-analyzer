@@ -1,10 +1,4 @@
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-
-import com.neo.codecomplexityanalyzer.model.CiResultModel;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 public class DemoMainApp {
 	public static void main(String[] args) {

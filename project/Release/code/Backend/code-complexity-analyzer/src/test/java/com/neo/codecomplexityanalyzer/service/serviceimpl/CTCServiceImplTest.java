@@ -1,4 +1,4 @@
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 import com.neo.codecomplexityanalyzer.controller.BasicCodeController;
 import org.junit.Test;

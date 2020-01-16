@@ -1,8 +1,6 @@
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class CTC_UtilitiesTest {
 

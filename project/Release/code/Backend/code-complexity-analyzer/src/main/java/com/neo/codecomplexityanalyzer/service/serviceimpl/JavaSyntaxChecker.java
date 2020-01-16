@@ -1,7 +1,8 @@
-package com.neo.codecomplexityanalyzer.service.serviceImpl;
-
-import java.util.*;
-
+package com.neo.codecomplexityanalyzer.service.serviceimpl;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import java.util.Locale;
 import javax.tools.Diagnostic;
 import javax.tools.DiagnosticCollector;
 import javax.tools.JavaCompiler;
@@ -23,11 +24,10 @@ public class JavaSyntaxChecker {
         Iterable<? extends JavaFileObject> compilationUnits =
                 fileManager.getJavaFileObjectsFromStrings(Arrays.asList(filePath));
 
-        DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<JavaFileObject>();
+        DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
         compiler.getTask(null, fileManager, diagnostics, null, null, compilationUnits).call();
 
-        List<String> messages = new ArrayList<String>();
-        Formatter formatter = new Formatter();
+        List<String> messages = new ArrayList<>();
         for (Diagnostic diagnostic : diagnostics.getDiagnostics()) {
             messages.add(diagnostic.getKind() + ":\t Line [" + diagnostic.getLineNumber() + "] \t Position [" + diagnostic.getPosition() + "]\t" + diagnostic.getMessage(Locale.ROOT) + "\n");
         }

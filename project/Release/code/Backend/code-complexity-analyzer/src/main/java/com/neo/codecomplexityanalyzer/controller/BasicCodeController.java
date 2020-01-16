@@ -10,7 +10,7 @@ package com.neo.codecomplexityanalyzer.controller;
 
 import java.util.*;
 
-import com.neo.codecomplexityanalyzer.service.serviceImpl.*;
+import com.neo.codecomplexityanalyzer.service.serviceimpl.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -84,7 +84,7 @@ public class BasicCodeController {
 			int catchScore = cctUtil.getCatchScore();
 			int switchScore = cctUtil.getSwitchScore();
 
-			HashMap<Integer, Integer> m1 = cctUtil.getLineScore();
+			HashMap<Integer, Integer> m1 = (HashMap<Integer, Integer>) cctUtil.getLineScore();
 			String[] lineScoreArray = new String[m1.size()];
 			if (!errorList.isEmpty()) {
 				Arrays.fill(lineScoreArray, "-");
@@ -165,7 +165,7 @@ public class BasicCodeController {
 		hashMap.put("SwitchScore", String.valueOf(switchScore));
 		hashMap.put("TotalCTCScore", String.valueOf(ctcTotal));
 
-		HashMap<Integer, Integer> m1 = cctUtil.getLineScore();
+		HashMap<Integer, Integer> m1 = (HashMap<Integer, Integer>) cctUtil.getLineScore();
 
 		return (new ResponseEntity<>(hashMap, HttpStatus.OK));
 	}
@@ -177,7 +177,7 @@ public class BasicCodeController {
 		cctUtil.getControlScore();
 		cctUtil.getCatchScore();
 		cctUtil.getSwitchScore();
-		HashMap<Integer, Integer> m1 = cctUtil.getLineScore();
+		HashMap<Integer, Integer> m1 = (HashMap<Integer, Integer>) cctUtil.getLineScore();
 		String[] lineScoreArray = new String[m1.size()];
 		int i = 0;
 		for (Map.Entry<Integer, Integer> entry : m1.entrySet()) {
